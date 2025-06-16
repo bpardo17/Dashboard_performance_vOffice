@@ -1,0 +1,842 @@
+@font-face {
+  font-family: "Foco-Bold";
+  src: url("webfonts/369238_0_0.eot");
+  src: url("webfonts/369238_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/369238_0_0.woff2") format("woff2"), url("webfonts/369238_0_0.woff") format("woff"), url("webfonts/369238_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Foco-Italic";
+  src: url("webfonts/369238_1_0.eot");
+  src: url("webfonts/369238_1_0.eot?#iefix") format("embedded-opentype"), url("webfonts/369238_1_0.woff2") format("woff2"), url("webfonts/369238_1_0.woff") format("woff"), url("webfonts/369238_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Foco-Light";
+  src: url("webfonts/369238_2_0.eot");
+  src: url("webfonts/369238_2_0.eot?#iefix") format("embedded-opentype"), url("webfonts/369238_2_0.woff2") format("woff2"), url("webfonts/369238_2_0.woff") format("woff"), url("webfonts/369238_2_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Foco-Regular";
+  src: url("webfonts/369238_3_0.eot");
+  src: url("webfonts/369238_3_0.eot?#iefix") format("embedded-opentype"), url("webfonts/369238_3_0.woff2") format("woff2"), url("webfonts/369238_3_0.woff") format("woff"), url("webfonts/369238_3_0.ttf") format("truetype");
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: none;
+}
+html .price_xs, body .price_xs {
+  font-size: 19px !important;
+}
+html .ufo, body .ufo {
+  width: 40px;
+  position: absolute;
+  z-index: 9999;
+  left: 0px;
+  top: 300px;
+  transition: all 10s;
+  animation: turbulencias 1s infinite;
+}
+html .ufo.universe-crossing, body .ufo.universe-crossing {
+  left: calc(100% + 200px);
+  top: calc(70% + 0px);
+  transition: all 10s;
+}
+html .ufo img, body .ufo img {
+  width: 100%;
+}
+html #video-bg, body #video-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  opacity: 20%;
+}
+html .header, body .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+html .header_nav, body .header_nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px 40px;
+}
+html .header_nav-logo, body .header_nav-logo {
+  display: inline-flex;
+  width: 100px;
+}
+html .header_nav-logo img, body .header_nav-logo img {
+  filter: brightness(10);
+  width: 100%;
+}
+html .header #currentTime, body .header #currentTime {
+  display: flex;
+  padding: 20px 40px;
+  color: #FFFFFF;
+  font-family: "Foco-Regular";
+  font-size: 1.2rem;
+  z-index: 1;
+}
+html .header #currentTime img, body .header #currentTime img {
+  margin-right: 10px;
+}
+html .content_wrapper, body .content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+html .content_wrapper .container, body .content_wrapper .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .content_wrapper .container .wrapper__maps, body .content_wrapper .container .wrapper__maps {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(10%, 0);
+  transition: transform 3s;
+}
+html .content_wrapper .container .wrapper__maps.w-full, body .content_wrapper .container .wrapper__maps.w-full {
+  transform: translate(0%, 0);
+}
+html .content_wrapper .container .wrapper__maps .map__ball, body .content_wrapper .container .wrapper__maps .map__ball {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 3s;
+  z-index: 2;
+}
+html .content_wrapper .container .wrapper__maps .map__ball#chartdiv__static, body .content_wrapper .container .wrapper__maps .map__ball#chartdiv__static {
+  z-index: 1;
+  opacity: 1;
+  transition: none;
+}
+html .content_wrapper .container .wrapper__maps .map__ball.fade--in, body .content_wrapper .container .wrapper__maps .map__ball.fade--in {
+  opacity: 1;
+  transition: all 3s;
+}
+html .content_wrapper .container .wrapper__maps .map__ball.fade--out, body .content_wrapper .container .wrapper__maps .map__ball.fade--out {
+  opacity: 0;
+  transition: all 3s;
+}
+html .content_wrapper .container .wrapper__metrics, body .content_wrapper .container .wrapper__metrics {
+  position: absolute;
+  display: block;
+  height: 100vh;
+  width: 19vw;
+  left: 4%;
+  z-index: 3;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view, body .content_wrapper .container .wrapper__metrics.hotel-view {
+  width: calc(100% - 80px);
+  left: 40px;
+  height: 300px;
+  bottom: 40px;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics, body .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show, body .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show {
+  position: relative;
+  box-shadow: none;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel, body .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel {
+  display: flex;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel .metrics__row--hotel-title, body .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel .metrics__row--hotel-title {
+  position: absolute;
+  top: -120px;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1;
+  left: 0px;
+}
+html .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel .metrics__row--hotel-title h3, body .content_wrapper .container .wrapper__metrics.hotel-view .container__metrics .metrics__view--6.show .metrics__hotel .metrics__row--hotel-title h3 {
+  text-transform: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics, body .content_wrapper .container .wrapper__metrics .container__metrics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills, body .content_wrapper .container .wrapper__metrics .container__metrics-pills {
+  width: 35%;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul {
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p {
+  display: flex;
+  padding: 6px;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: "Foco-Regular";
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s;
+  color: #FFF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p:before, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  z-index: -1;
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p img, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li p img {
+  padding-left: 10px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.active p, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.active p {
+  color: #FFFFFF;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.active p:before, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.active p:before {
+  left: 0px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.no-active p:before, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.no-active p:before {
+  left: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.invisible p:before, body .content_wrapper .container .wrapper__metrics .container__metrics-pills ul li.invisible p:before {
+  width: 0px;
+  height: 0px;
+  transition: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics {
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+  animation: blur-in 0ms 0ms forwards;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.hidden, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.hidden {
+  display: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show {
+  opacity: 1;
+  transition: all 1s;
+  right: 1px;
+  position: absolute;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 {
+  opacity: 0;
+  transition: all 1s;
+  padding: 16px 26px;
+  width: calc(100% - 400px);
+  background: rgba(255, 255, 255, 0.4);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6.active-hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6.active-hotel {
+  opacity: 1;
+  transition: all 1s;
+  box-shadow: 0px -1px 1px 0px rgb(255, 255, 255) inset, 0px 1px 1px 0px rgb(255, 255, 255) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6.active-hotel:before, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6.active-hotel:before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: -500px;
+  width: calc(100% + 1000px);
+  height: calc(100% + 240px);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  z-index: -1;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel {
+  position: absolute;
+  width: 330px;
+  left: -350px;
+  bottom: 0px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel img {
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel.active-hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics_image--hotel.active-hotel {
+  visibility: visible;
+  opacity: 1;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity 300ms, visibility 300ms, height 1000ms;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1.active-hotel, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2.active-hotel, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3.active-hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1.active-hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2.active-hotel, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3.active-hotel {
+  visibility: visible;
+  opacity: 1;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row {
+  flex: 1;
+  padding: 0px;
+  border-bottom: 0px;
+  align-items: flex-start;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row.metrics__row--group, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row.metrics__row--group, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row.metrics__row--group, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row.metrics__row--group, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row.metrics__row--group, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row.metrics__row--group {
+  width: 555px;
+  gap: 0px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-title p, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-title p, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-title p {
+  justify-content: flex-start;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality {
+  padding: 0px;
+  margin: 0px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card {
+  align-items: flex-start;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .badge--top {
+  margin: 0px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  margin: 0px;
+  border-radius: 8px;
+  padding: 4px 8px 2px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__wrap.nationality .metrics__card-info-title .countries span.main_metric {
+  margin-left: 16px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info-title p, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info-title p, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info-title p {
+  font-size: 18px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info-data p span, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info-data p span, html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info-data p span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel1 .metrics__row .metrics__card-info-data p span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel2 .metrics__row .metrics__card-info-data p span, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.show.metrics__view--6 .metrics__hotel3 .metrics__row .metrics__card-info-data p span {
+  font-size: 30px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.left, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.left {
+  opacity: 0;
+  right: 0px;
+  transition: all 1s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics.right, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics.right {
+  opacity: 0;
+  right: 0px;
+  transition: all 1s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row {
+  display: flex;
+  flex-flow: column;
+  padding: 30px 0px 20px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row:last-child, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row:last-child {
+  border: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.isHidden, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.isHidden {
+  display: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.metrics__row--hotel-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.metrics__row--hotel-title {
+  padding: 0px 10px;
+  border: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.metrics__row--hotel-title h3, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row.metrics__row--hotel-title h3 {
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card {
+  color: #FFFFFF;
+  font-family: "Foco-Regular";
+  gap: 0rem;
+  transition: all 0.3s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title {
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 0rem;
+  padding-bottom: 0.5rem;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title p {
+  display: flex;
+  gap: 4px;
+  font-family: "Foco-Regular";
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+  opacity: 0.75;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title img {
+  width: 24px;
+  filter: brightness(10);
+  opacity: 0.65;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title .countries img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card-title .countries img {
+  filter: none;
+  opacity: 1;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row .metrics__card p {
+  margin: 0px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group {
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__card-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__card-title {
+  border: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__card-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__card-title p {
+  justify-content: center;
+  text-transform: uppercase;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap {
+  width: 100%;
+  padding-bottom: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card {
+  flex-flow: column;
+  display: flex;
+  align-items: center;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card-title {
+  width: 100%;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info {
+  text-align: center;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title img {
+  width: 20px;
+  filter: brightness(10);
+  opacity: 0.65;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title p {
+  width: 100%;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title p.countries img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-title p.countries img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: none;
+  opacity: 1;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-data p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-info-data p {
+  font-weight: 700;
+  font-size: 28px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff {
+  border-radius: 4px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff p {
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 16px;
+  padding: 0.1rem 0.25rem;
+  display: flex;
+  align-items: flex-end;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--up, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--up {
+  background-color: rgba(18, 183, 106, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--up svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--up svg path {
+  fill: rgb(18, 183, 106);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down {
+  background-color: rgba(228, 0, 43, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down svg {
+  transform: rotate(90deg);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--down svg path {
+  fill: #E4002B;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal {
+  background-color: #454545;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal svg {
+  display: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap .metrics__card .metrics__card-diff--equal svg path {
+  fill: #FFFFFF;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.in-block, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.in-block {
+  flex-flow: column;
+  gap: 1.5rem;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.in-block .metrics__wrap--row, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.in-block .metrics__wrap--row {
+  flex-flow: row;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider {
+  position: relative;
+  display: flex;
+  min-width: 100%;
+  left: 0;
+  transition: all 0.5s;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card {
+  min-width: 33.3%;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top {
+  font-size: 14px;
+  padding: 3px 3px 0 3px;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  background: rgb(45, 45, 45);
+  color: white;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.gold, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.gold {
+  background: linear-gradient(45deg, #967c16, #be9e21);
+  color: white;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.silver, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.silver {
+  background: linear-gradient(45deg, #838383, #6f6f6f);
+  color: white;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.bronze, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--group .metrics__wrap.nationality .metric__wrap--slider .metrics__card-info .badge--top.bronze {
+  background: linear-gradient(45deg, #906163, #644444);
+  color: white;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card {
+  align-items: center;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title {
+  text-align: center;
+  margin-bottom: 13px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title img {
+  width: 24px;
+  filter: brightness(10);
+  opacity: 0.65;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title .countries img, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title .countries img {
+  filter: none;
+  opacity: 1;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-title p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  opacity: 0.75;
+  gap: 4px;
+  text-transform: uppercase;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content {
+  display: flex;
+  flex-flow: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content-data p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content-data p {
+  font-weight: 700;
+  font-size: 20px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff {
+  margin-left: 10px;
+  border-radius: 4px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff p {
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 16px;
+  padding: 0.1rem 0.25rem;
+  display: flex;
+  align-items: flex-end;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--up, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--up {
+  background-color: rgba(18, 183, 106, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--up svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--up svg path {
+  fill: rgb(18, 183, 106);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down {
+  background-color: rgba(228, 0, 43, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down svg {
+  transform: rotate(90deg);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--down svg path {
+  fill: #E4002B;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal {
+  background-color: #454545;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal svg {
+  display: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-content .metrics__card-diff--equal svg path {
+  fill: #FFFFFF;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-data p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-info-data p {
+  font-weight: 600;
+  font-size: 28px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff {
+  border-radius: 4px;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff p, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff p {
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 0.5rem;
+  display: flex;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--up, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--up {
+  background-color: rgba(18, 183, 106, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--up svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--up svg path {
+  fill: rgb(18, 183, 106);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down {
+  background-color: rgba(228, 0, 43, 0.25);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down svg {
+  transform: rotate(90deg);
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--down svg path {
+  fill: #E4002B;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal {
+  background-color: #454545;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal svg, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal svg {
+  display: none;
+}
+html .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal svg path, body .content_wrapper .container .wrapper__metrics .container__metrics .metrics__row--individual .metrics__card .metrics__card-diff--equal svg path {
+  fill: #FFFFFF;
+}
+html .content_wrapper .container .wrapper__metrics.w-hide .container__metrics, body .content_wrapper .container .wrapper__metrics.w-hide .container__metrics {
+  opacity: 1;
+}
+html .content_wrapper .container .wrapper__metrics.w-hide .container__metrics .container__metrics-pills, body .content_wrapper .container .wrapper__metrics.w-hide .container__metrics .container__metrics-pills {
+  opacity: 0;
+  transition: opacity 2s;
+}
+html .content_wrapper .container .wrapper__metrics.w-hide .container__metrics .metrics, body .content_wrapper .container .wrapper__metrics.w-hide .container__metrics .metrics {
+  opacity: 0;
+  transition: opacity 2s;
+}
+html .content_wrapper .container .wrapper__metrics-tabs, body .content_wrapper .container .wrapper__metrics-tabs {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 16px;
+  z-index: 3;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills {
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul {
+  gap: 8px;
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li p, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li p {
+  display: flex;
+  padding: 6px;
+  gap: 8px;
+  font-family: "Foco-Regular";
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s;
+  color: #FFF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  align-items: center;
+  margin: 0;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li p:before, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li p:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  z-index: -1;
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.active p, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.active p {
+  color: #FFFFFF;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.active p:before, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.active p:before {
+  left: 0px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.no-active p:before, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.no-active p:before {
+  left: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s;
+}
+html .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.invisible p:before, body .content_wrapper .container .wrapper__metrics-tabs .container__metrics-pills ul li.invisible p:before {
+  width: 0px;
+  height: 0px;
+  transition: none;
+}
+
+@keyframes turbulencias {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes blur-in {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  to {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+@keyframes showNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.detail-googlemaps {
+  margin: 0 auto;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.detail-googlemaps.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  background: #000000;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#gmp-map-3d {
+  opacity: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  transition: opacity 2.5s;
+}
+#gmp-map-3d.active {
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+
+.vAygCK-api-load-alpha-banner {
+  display: none !important;
+}/*# sourceMappingURL=styles.css.map */

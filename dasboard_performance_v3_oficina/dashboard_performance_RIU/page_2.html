@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+        <script src="https://cdn.anychart.com/geodata/latest/custom/world/world.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/themes/monochrome.min.js"></script>
+        <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+        <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+        <style type="text/css">
+            html,
+            body,
+            #container {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/styles.css">
+        <script src="assets/script.js"></script>
+    </head>
+    <body class="fade-in">
+        <div id="container"></div>
+        <script>
+            anychart.onDocumentReady(function () {
+                // set chart theme
+                anychart.theme('monochrome');
+                // The data used in this sample can be obtained from the CDN hola
+                // https://cdn.anychart.com/samples/maps-point-maps-dot-maps/airplane-crashes-since-1970-till-2009/data.json
+                anychart.data.loadJsonFile(
+                    'https://cdn.anychart.com/samples/maps-point-maps-dot-maps/airplane-crashes-since-1970-till-2009/data.json',
+                    function (data) {
+                        // sets map chart
+                        var map = anychart.map();
+                        map.geoData('anychart.maps.world').padding(0);
+
+                        map
+                            .unboundRegions()
+                            .enabled(true)
+                            .fill('#E1E1E1')
+                            .stroke('#D2D2D2');
+
+                        // sets credits for this sample
+                        map
+                            .credits()
+                            .enabled(true)
+                            .url(
+                                'https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq'
+                            )
+                            .text('Data source: https://opendata.socrata.com')
+                            .logoSrc(
+                                'https://opendata.socrata.com/stylesheets/images/common/favicon.ico'
+                            );
+
+                        // sets chart title
+                        map
+                            .title()
+                            .enabled(true)
+                            .useHtml(true)
+                            .padding([20, 0, 10, 0])
+                            .text(
+                                'RIU Página 1<br/>' +
+                                '<span style="color:#929292; font-size: 12px;">' +
+                                'Data was filtered with more than 10 fatalities.</span>'
+                            );
+
+                        // creates Dataset from Sample data
+                        var crashesDataSet = anychart.data.set(data).mapAs();
+
+                        // helper function to create several series
+                        var createSeries = function (name, data, color) {
+                            // sets marker series and series settings
+                            var series = map.marker(data);
+                            series
+                                .name(name)
+                                .fill(color)
+                                .stroke('2 #E1E1E1')
+                                .type('circle')
+                                .size(4)
+                                .labels(false)
+                                .selectionMode('none');
+
+                            series.hovered().stroke('2 #fff').size(8);
+
+                            series
+                                .legendItem()
+                                .iconType('circle')
+                                .iconFill(color)
+                                .iconStroke('2 #E1E1E1');
+                        };
+
+                        // creates 5 series, filtering the data by the amount of Fatalities
+                        createSeries(
+                            '10 - 50',
+                            crashesDataSet.filter('fatalities', filterFunction(10, 50)),
+                            '#64b5f6'
+                        );
+                        createSeries(
+                            '50 - 100',
+                            crashesDataSet.filter('fatalities', filterFunction(50, 100)),
+                            '#1976d2'
+                        );
+                        createSeries(
+                            '100 - 150',
+                            crashesDataSet.filter('fatalities', filterFunction(100, 150)),
+                            '#355CB1'
+                        );
+                        createSeries(
+                            '150 - 200',
+                            crashesDataSet.filter('fatalities', filterFunction(150, 200)),
+                            '#5C3883'
+                        );
+                        createSeries(
+                            'More than 200 fatalities',
+                            crashesDataSet.filter('fatalities', filterFunction(200, 0)),
+                            '#880e4f'
+                        );
+
+                        // Enables map tooltip and sets settings for tooltip
+                        map.tooltip().title().fontColor('#fff');
+                        map.tooltip().titleFormat(function () {
+                            return this.getData('date');
+                        });
+
+                        map
+                            .tooltip()
+                            .useHtml(true)
+                            .padding([8, 13, 10, 13])
+                            .width(350)
+                            .fontSize(12)
+                            .fontColor('#e6e6e6')
+                            .format(function () {
+                                var summary = '<br/><br/>' + this.getData('summary');
+                                if (this.getData('summary') === 'null') summary = '';
+                                return (
+                                    '<span style="font-size: 13px"><span style="color: #bfbfbf">Operator: </span>"' +
+                                    this.getData('operator') +
+                                    '"<br/>' +
+                                    '<span style="color: #bfbfbf">Place: </span>' +
+                                    this.getData('place') +
+                                    '<br/>' +
+                                    '<span style="color: #bfbfbf">Fatalities: </span>' +
+                                    this.getData('fatalities') +
+                                    ' people</span>' +
+                                    summary
+                                );
+                            });
+
+                        // turns on the legend for the sample
+                        map.legend(true);
+
+                        // create zoom controls
+                        var zoomController = anychart.ui.zoom();
+                        zoomController.render(map);
+
+                        // sets container id for the chart
+                        map.container('container');
+
+                        // initiates chart drawing
+                        map.draw();
+                    }
+                );
+            });
+
+            // helper function to bind data field to the local var.
+            function filterFunction(val1, val2) {
+                if (val2) {
+                    return function (fieldVal) {
+                        return val1 <= fieldVal && fieldVal < val2;
+                    };
+                }
+                return function (fieldVal) {
+                    return val1 <= fieldVal;
+                };
+            }
+        </script>
+    </body>
+</html>

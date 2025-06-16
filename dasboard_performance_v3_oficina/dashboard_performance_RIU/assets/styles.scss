@@ -1,0 +1,925 @@
+@font-face {
+    font-family: 'Foco-Bold';
+    src: url('webfonts/369238_0_0.eot'); 
+    src: url('webfonts/369238_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/369238_0_0.woff2') format('woff2'),url('webfonts/369238_0_0.woff') format('woff'),url('webfonts/369238_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco-Italic';
+    src: url('webfonts/369238_1_0.eot');
+    src: url('webfonts/369238_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/369238_1_0.woff2') format('woff2'),url('webfonts/369238_1_0.woff') format('woff'),url('webfonts/369238_1_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco-Light';
+    src: url('webfonts/369238_2_0.eot');
+    src: url('webfonts/369238_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/369238_2_0.woff2') format('woff2'),url('webfonts/369238_2_0.woff') format('woff'),url('webfonts/369238_2_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco-Regular';
+    //src: url('../webfonts/369238_3_0.eot');
+    src: url('webfonts/369238_3_0.eot');
+    src: url('webfonts/369238_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/369238_3_0.woff2') format('woff2'),url('webfonts/369238_3_0.woff') format('woff'),url('webfonts/369238_3_0.ttf') format('truetype');
+}
+
+$color-white: #FFFFFF; // Blanco
+$color-black: #000000; // Negro
+$color-red: #E4002B; // Rojo
+$color-green: rgba(18, 183, 106, 1); // Verde
+$color-green-light: rgba(18, 183, 106, .25); // Verde claro
+$color-red-light: rgba(228, 0, 43, 0.25); // Rojo claro
+$color-gray-light: rgba(255, 255, 255, 0.25); // Gris claro
+$color-gray-dark: rgba(0, 0, 0, 0.0); // Gris oscuro (transparente)
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: none;
+    .price_xs{
+        font-size: 19px !important;
+    }
+    .ufo{
+        width: 40px;
+        position: absolute;
+        z-index: 9999;
+        left: 00px;
+        top: 300px;
+        transition: all 10s;
+        animation: turbulencias 1s infinite;
+        &.universe-crossing{
+            left: calc(100% + 200px);
+            top: calc(70% + 00px);
+            transition: all 10s;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    #video-bg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100vw;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        opacity: 20%;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        &_nav{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 20px 40px;
+            &-logo{
+                display: inline-flex;
+                width: 100px;
+                img{
+                    filter: brightness(10);
+                    width: 100%;
+                }
+            }
+        }
+        #currentTime{
+            display: flex;
+            padding: 20px 40px;
+            color: $color-white;
+            font-family: 'Foco-Regular';
+            font-size: 1.2rem;
+            z-index: 1;
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+    .content_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .wrapper__maps{
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                transform: translate(10%, 0);
+                transition: transform 3s;
+                &.w-full {
+                    transform: translate(0%, 0);
+                }
+                .map__ball{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all 3s;
+                    z-index: 2;
+                    &#chartdiv__static{
+                        z-index: 1;
+                        opacity: 1;
+                        transition: none;
+                    }
+                    &.fade--in{
+                        opacity: 1;
+                        transition: all 3s;
+                    }
+                    &.fade--out{
+                        opacity: 0;
+                        transition: all 3s;
+                    }
+                }
+            }
+            .wrapper__metrics{
+                position: absolute;
+                display: block;
+                height: 100vh;
+                width: 19vw;
+                left: 4%;
+                z-index: 3;
+                &.hotel-view{
+                    width: calc(100% - 80px);
+                    left: 40px;
+                    height: 300px;
+                    bottom: 40px;
+                    .container__metrics{
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        .metrics__view--6{
+                            &.show{
+                                position: relative;
+                                //background: transparent;
+                                box-shadow: none;
+                                .metrics__hotel{
+                                    display: flex;
+                                    .metrics__row--hotel-title{
+                                        position: absolute;
+                                        top: -120px;
+                                        font-size: 45px;
+                                        font-weight: 900;
+                                        line-height: 1;
+                                        left: 0px;
+                                        h3{
+                                            text-transform: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .container__metrics {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &-pills{
+                        width: 35%;
+                        border-radius: 12px;
+                        background: rgba(0, 0, 0, 0.30);
+                        box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+                        backdrop-filter: blur(50px);
+                        ul{
+                            list-style: none;
+                            margin: 0px;
+                            padding: 10px;
+                            li{
+                                // cursor: pointer;
+                                p{
+                                    display: flex;
+                                    padding: 6px;
+                                    align-items: flex-end;
+                                    gap: 8px;
+                                    font-family: 'Foco-Regular';
+                                    font-size: 1rem;
+                                    position: relative;
+                                    z-index: 1;
+                                    overflow: hidden;
+                                    transition: all .5s;
+                                    color: #FFF;
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 19px;
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        left: -100%;
+                                        top: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(255, 255, 255, 0.10);
+                                        border-radius: 6px;
+                                        z-index: -1;
+                                        transition: all .75s;
+                                    }
+                                    img {
+                                        padding-left: 10px;
+                                    }
+                                }
+                                &.active{
+                                    p{
+                                        color: $color-white;
+                                        &:before{
+                                            left: 0px;
+                                            background: rgba(255, 255, 255, 0.10);
+                                            transition: all .75s;
+                                        }
+                                    }
+                                }
+                                &.no-active{
+                                    p{
+                                        &:before{
+                                            left: 100%;
+                                            background: rgba(255, 255, 255, 0.10);
+                                            transition: all .75s;
+                                        }
+                                    }
+                                }
+                                &.invisible{
+                                    p{
+                                        &:before{
+                                            width: 0px;
+                                            height: 0px;
+                                            transition: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .metrics{
+                        width: calc(100%);
+                        padding: 10px 20px;
+                        z-index: 1;
+                        display: flex;
+                        flex-flow: column;
+                        border-radius: 12px;
+                        background: rgba(0, 0, 0, 0.8);
+                        box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+                        animation: blur-in 0ms 0ms forwards;
+                        // backdrop-filter: blur(50px);
+                        // -webkit-backdrop-filter: blur(50px);
+                        &.hidden{
+                            display: none;
+                        }
+                        &.show{
+                            opacity: 1;
+                            transition: all 1s;
+                            right: 1px;
+                            position: absolute;
+                            &.metrics__view--6 {
+                                opacity: 0;
+                                transition: all 1s;
+                                padding: 16px 26px;
+                                width: calc(100% - 400px);
+                                background: rgba(255,255,255,.4);
+                                &.active-hotel {
+                                    opacity: 1;
+                                    transition: all 1s;
+                                    box-shadow: 0px -1px 1px 0px rgb(255 255 255) inset, 0px 1px 1px 0px rgb(255 255 255) inset, 0px 8px 6px 0px rgb(0 0 0 / 0%);
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -40px;
+                                        left: -500px;
+                                        width: calc(100% + 1000px);
+                                        height: calc(100% + 240px);
+                                        background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+                                        z-index: -1;
+                                    }
+                                }
+                                .metrics_image--hotel{
+                                    position: absolute;
+                                    width: 330px;
+                                    left: -350px;
+                                    bottom: 0px;
+                                    border-radius: 8px;
+                                    overflow: hidden;
+                                    height: auto;
+                                    display: flex;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    img{
+                                        width: 100%;
+                                        border-radius: 8px;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                    &.active-hotel{
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                                .metrics__hotel1, .metrics__hotel2, .metrics__hotel3 {
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    height: 0;
+                                    -webkit-transition: opacity 300ms, visibility 300ms, height 1000ms;
+                                    transition: opacity 300ms, visibility 300ms, height 1000ms;
+                                    &.active-hotel {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        height: fit-content;
+                                    }
+                                    .metrics__row{
+                                        flex: 1;
+                                        padding: 0px;
+                                        border-bottom: 0px;
+                                        align-items: flex-start;
+                                        &.metrics__row--group{
+                                            width: 555px;
+                                            gap: 0px;
+                                        }
+                                        .metrics__card-title{
+                                            p{
+                                                justify-content: flex-start;
+                                            }
+                                        }
+                                        .metrics__wrap{
+                                            &.nationality{
+                                                padding: 0px;
+                                                margin: 0px;
+                                                .metrics__card{
+                                                    align-items: flex-start;
+                                                    &-info{
+                                                        &-title{
+                                                            display: flex;
+                                                            align-items: center;
+                                                            gap: 8px;
+                                                            .badge--top{
+                                                                margin: 0px;
+                                                            }
+                                                            .countries{
+                                                                background-color: rgba(0,0,0,.1);
+                                                                border-top: 2px solid $color-gray-light;
+                                                                border-bottom: 2px solid $color-gray-light;
+                                                                display: inline-flex;
+                                                                align-items: center;
+                                                                margin: 0px;
+                                                                border-radius: 8px;
+                                                                padding: 4px 8px 2px;
+                                                                span{
+                                                                    display: inline-block;
+                                                                    font-size: 14px;
+                                                                    font-weight: 700;
+                                                                    &.main_metric{
+                                                                        margin-left: 16px;
+                                                                        font-size: 30px;
+                                                                        line-height: 1.2;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .metrics__card{
+                                            &-info{
+                                                align-items: flex-start;
+                                                display: flex;
+                                                flex-flow: column;
+                                                &-title{
+                                                    p{
+                                                        font-size: 18px;
+                                                    }
+                                                }
+                                                &-data{
+                                                    p{
+                                                        span{
+                                                            font-size: 30px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.left{
+                            opacity: 0;
+                            right: 0px;
+                            transition: all 1s;
+                        }
+                        &.right{
+                            opacity: 0;
+                            right: 0px;
+                            transition: all 1s;
+                        }
+                        &__row{
+                            display: flex;
+                            flex-flow: column;
+                            padding: 30px 0px 20px 0px;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+                            &:last-child{
+                                border: none;
+                            }
+                            &.isHidden {
+                                display: none;
+                            }
+                            &.metrics__row--hotel-title {
+                                padding: 0px 10px;
+                                border: none;
+                                h3 {
+                                    margin-bottom: 0px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .metrics__card{
+                                color: $color-white;
+                                font-family: 'Foco-Regular';
+                                //backdrop-filter: blur(3px);
+                                gap: 0rem;
+                                transition: all .3s;
+                                &-title{
+                                    width: 100%;
+                                    border-bottom: 2px solid $color-gray-light;
+                                    margin-bottom: 0rem;
+                                    padding-bottom: .5rem;
+                                    p{
+                                        display: flex;
+                                        gap: 4px;
+                                        font-family: 'Foco-Regular';
+                                        align-items: center;
+                                        color:$color-white;
+                                        font-size: 20px;
+                                        font-weight: 400;
+                                        margin: 0px;
+                                        opacity: .75;
+                                    }
+                                    img{
+                                        width: 24px;
+                                        filter: brightness(10);
+                                        opacity: .65;
+                                    }
+                                    .countries{
+                                        img{
+                                            filter: none;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                p{
+                                    margin: 0px;
+                                }
+                            }
+                            &--group{
+                                flex: 1;
+                                align-items: center;
+                                gap: 0.5rem;
+                                .metrics__card-title {
+                                    border: none;
+                                    p {
+                                        justify-content: center;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                .metrics__wrap{
+                                    width: 100%;
+                                    padding-bottom: 10px;
+                                    display: flex;
+                                    flex-flow: row;
+                                    justify-content: space-around;
+                                    .metrics__card{
+                                        flex-flow: column;
+                                        display: flex;
+                                        align-items: center;
+                                        &-title{
+                                            width: 100%;
+                                        }
+                                        .metrics__card-info{
+                                            text-align: center;
+                                            &-title{
+                                                img{
+                                                    width: 20px;
+                                                    filter: brightness(10);
+                                                    opacity: .65;
+                                                }
+                                                p{
+                                                    width: 100%;
+                                                    display: flex;
+                                                    gap: .25rem;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    font-size: 14px;
+                                                    margin-bottom: .5rem;
+                                                    &.countries{
+                                                        img{
+                                                            width: 20px;
+                                                            height: 20px;
+                                                            border-radius: 50px;
+                                                            object-fit: cover;
+                                                            filter: none;
+                                                            opacity: 1;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &-data{
+                                                p{
+                                                    font-weight: 700;
+                                                    font-size: 28px;
+                                                }
+                                            }
+                                        }
+                                        .metrics__card-diff{
+                                            border-radius: 4px;
+                                            p{
+                                                color: $color-white;
+                                                font-size: 15px;
+                                                line-height: 16px;
+                                                padding: .1rem .25rem;
+                                                display: flex;
+                                                align-items: flex-end;
+                                            }
+                                            &--up{
+                                                background-color: $color-green-light;
+                                                svg{
+                                                    path{
+                                                        fill: $color-green;
+                                                    }
+                                                }
+                                            }
+                                            &--down{
+                                                background-color: $color-red-light;
+                                                svg{
+                                                    transform: rotate(90deg);
+                                                    path{
+                                                        fill: $color-red;
+                                                    }
+                                                }
+                                            }
+                                            &--equal{
+                                                background-color: #454545;
+                                                svg{
+                                                    display: none;
+                                                    path{
+                                                        fill: $color-white;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.in-block{
+                                        flex-flow: column;
+                                        gap: 1.5rem;
+                                        .metrics__wrap--row{
+                                            flex-flow: row;
+                                            display: flex;
+                                            gap: 4px;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                        }
+                                    }
+                                    &.nationality{
+                                        position: relative;
+                                        max-width: 100%;
+                                        margin: auto;
+                                        display: block;
+                                        overflow: hidden;
+                                        .metric__wrap--slider{
+                                            position: relative;
+                                            display: flex;
+                                            min-width: 100%;
+                                            left: 0;
+                                            transition: all .5s;
+                                            .metrics__card{
+                                                min-width: 33.3%;
+                                                &-info{
+                                                    .badge--top{
+                                                        font-size: 14px;
+                                                        padding: 3px 3px 0 3px;
+                                                        display: inline-block;
+                                                        border-radius: 4px;
+                                                        font-weight: 900;
+                                                        margin-bottom: 10px;
+                                                        background: rgb(45, 45, 45);
+                                                        color: white;
+                                                        &.gold{
+                                                            background: linear-gradient(45deg, #967c16, #be9e21);
+                                                            color: white;
+                                                        }
+                                                        &.silver{
+                                                            background: linear-gradient(45deg, #838383, #6f6f6f);
+                                                            color: white;
+                                                        }
+                                                        &.bronze{
+                                                            background: linear-gradient(45deg, #906163, #644444);
+                                                            color: white;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &--individual{
+                                .metrics__card{
+                                    align-items: center;
+                                    .metrics__card-info{
+                                        &-title{
+                                            text-align: center;
+                                            margin-bottom: 13px;
+                                            img{
+                                                width: 24px;
+                                                filter: brightness(10);
+                                                opacity: .65;
+                                            }
+                                            .countries{
+                                                img{
+                                                    filter: none;
+                                                    opacity: 1;
+                                                }
+                                            }
+                                            p{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-size: 20px;
+                                                opacity: .75;
+                                                gap: 4px;
+                                                text-transform: uppercase;
+                                            }
+                                        }
+                                        &-content{
+                                            display: flex;
+                                            flex-flow: column;
+                                            flex-direction: row;
+                                            justify-content: center;
+                                            align-items: flex-start;
+                                            &-data{
+                                                p{
+                                                    font-weight: 700;
+                                                    font-size: 20px;
+                                                }
+                                            }
+                                            .metrics__card-diff{
+                                                margin-left: 10px;
+                                                border-radius: 4px;
+                                                p{
+                                                    color: $color-white;
+                                                    font-size: 15px;
+                                                    line-height: 16px;
+                                                    padding: .1rem .25rem;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                }
+                                                &--up{
+                                                    background-color: $color-green-light;
+                                                    svg{
+                                                        path{
+                                                            fill: $color-green;
+                                                        }
+                                                    }
+                                                }
+                                                &--down{
+                                                    background-color: $color-red-light;
+                                                    svg{
+                                                        transform: rotate(90deg);
+                                                        path{
+                                                            fill: $color-red;
+                                                        }
+                                                    }
+                                                }
+                                                &--equal{
+                                                    background-color: #454545;
+                                                    svg{
+                                                        display: none;
+                                                        path{
+                                                            fill: $color-white;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &-data{
+                                            p{
+                                                font-weight: 600;
+                                                font-size: 28px;
+                                            }
+                                        }
+                                    }
+                                    .metrics__card-diff{
+                                        border-radius: 4px;
+                                        p{
+                                            color: $color-white;
+                                            font-size: 18px;
+                                            padding: .5rem;
+                                            display: flex;
+                                        }
+                                        &--up{
+                                            background-color: $color-green-light;
+                                            svg{
+                                                path{
+                                                    fill: $color-green;
+                                                }
+                                            }
+                                        }
+                                        &--down{
+                                            background-color: $color-red-light;
+                                            svg{
+                                                transform: rotate(90deg);
+                                                path{
+                                                    fill: $color-red;
+                                                }
+                                            }
+                                        }
+                                        &--equal{
+                                            background-color: #454545;
+                                            svg{
+                                                display: none;
+                                                path{
+                                                    fill: $color-white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.w-hide {
+                    .container__metrics {
+                        opacity: 1;
+                        .container__metrics-pills {
+                            opacity: 0;
+                            transition: opacity 2s;
+                        }
+                        .metrics {
+                            opacity: 0;
+                            transition: opacity 2s;
+                        }
+                    }
+                }
+            }
+            .wrapper__metrics-tabs {
+                position: absolute;
+                display: block;
+                //height: 100vh;
+                //width: 28vw;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 16px;
+                z-index: 3;
+                .container__metrics-pills{
+                    //width: 35%;
+                    border-radius: 12px;
+                    background: rgba(0, 0, 0, 0.20);
+                    box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+                    backdrop-filter: blur(50px);
+                    ul{
+                        gap: 8px;
+                        list-style: none;
+                        margin: 0px;
+                        padding: 10px;
+                        display: flex                    ;
+                        flex-direction: row;
+                        li{
+                            // cursor: pointer;
+                            p{
+                                display: flex;
+                                padding: 6px;
+                                //align-items: flex-end;
+                                gap: 8px;
+                                font-family: 'Foco-Regular';
+                                font-size: 1rem;
+                                position: relative;
+                                z-index: 1;
+                                overflow: hidden;
+                                transition: all .5s;
+                                color: #FFF;
+                                font-size: 15px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 19px;
+                                align-items: center;
+                                margin: 0;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    left: -100%;
+                                    top: 0px;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(255, 255, 255, 0.10);
+                                    border-radius: 6px;
+                                    z-index: -1;
+                                    transition: all .75s;
+                                }
+                                img {
+                                    //padding-left: 10px;
+                                }
+                            }
+                            &.active{
+                                p{
+                                    color: $color-white;
+                                    &:before{
+                                        left: 0px;
+                                        background: rgba(255, 255, 255, .30);
+                                        transition: all .75s;
+                                    }
+                                }
+                            }
+                            &.no-active{
+                                p{
+                                    &:before{
+                                        left: 100%;
+                                        background: rgba(255, 255, 255, 0.10);
+                                        transition: all .75s;
+                                    }
+                                }
+                            }
+                            &.invisible{
+                                p{
+                                    &:before{
+                                        width: 0px;
+                                        height: 0px;
+                                        transition: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes turbulencias{
+    0%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes blur-in {
+    from {
+        backdrop-filter: blur(0px);
+    }
+    to {
+        backdrop-filter: blur(10px);
+    }
+}
+
+@keyframes showNav {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.detail-googlemaps {
+    margin: 0 auto;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 1s;
+    &.fullscreen {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0 !important;
+        left: 0 !important;
+        background: #000000;
+        z-index: 10;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+}
+#gmp-map-3d {
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    transition: opacity 2.5s;
+    &.active {
+        opacity: 1;
+        transition: opacity 2.5s;
+    }
+}
+.vAygCK-api-load-alpha-banner {
+    display: none !important;
+}

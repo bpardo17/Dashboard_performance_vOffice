@@ -1,0 +1,986 @@
+{
+    "info_hotel_google_maps": [
+        {
+            "hotel_id": 3102,
+            "hotel_name": "Hotel Riu Palace Antillas",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 233,
+            "centerLatitude": 12.565795035766083,
+            "centerLongitude": -70.0482471535372,
+            "range": 500
+        },
+        {
+            "hotel_id": 3105,
+            "hotel_name": "Hotel Riu Palace Aruba",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 123,
+            "centerLatitude": 12.566568220471977,
+            "centerLongitude": -70.04738234101339,
+            "range": 500
+        },
+        {
+            "hotel_id": 4001,
+            "hotel_name": "Hotel Riu Palace Paradise Island",
+            "altitude": 15,
+            "is3dmodel": true,
+            "heading": 220,
+            "centerLatitude": 25.084706660470832,
+            "centerLongitude": -77.31636512841398,
+            "range": 360
+        },
+        {
+            "hotel_id": 5401,
+            "hotel_name": "Hotel Riu Guanacaste",
+            "altitude": 17,
+            "is3dmodel": false,
+            "heading": 175,
+            "centerLatitude": 10.52861581087388,
+            "centerLongitude": -85.74721365151233,
+            "range": 500
+        },
+        {
+            "hotel_id": 5402,
+            "hotel_name": "Hotel Riu Palace Costa Rica",
+            "altitude": 14,
+            "is3dmodel": false,
+            "heading": 220,
+            "centerLatitude": 10.527803458414958,
+            "centerLongitude": -85.74921408224365,
+            "range": 500
+        },
+        {
+            "hotel_id": 705,
+            "hotel_name": "Hotel Riu Bambu",
+            "altitude": 6,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 18.72298780793721, 
+            "centerLongitude": -68.45741813736576,
+            "range": 500
+        },
+        {
+            "hotel_id": 707,
+            "hotel_name": "Hotel Riu Palace Bavaro",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 350,
+            "centerLatitude": 18.718364687794647,
+            "centerLongitude": -68.45453251812238,
+            "range": 500
+        },
+        {
+            "hotel_id": 712,
+            "hotel_name": "Hotel Riu Palace Macao",
+            "altitude": 9,
+            "is3dmodel": false,
+            "heading": 310,
+            "centerLatitude": 18.720311561672307,
+            "centerLongitude": -68.45566928335899,
+            "range": 500
+        },
+        {
+            "hotel_id": 706,
+            "hotel_name": "Hotel Riu Palace Punta Cana",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 290,
+            "centerLatitude": 18.722692411994693,
+            "centerLongitude": -68.45936873653653,
+            "range": 500
+        },
+        {
+            "hotel_id": 709,
+            "hotel_name": "Hotel Riu Republica",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 300,
+            "centerLatitude": 18.732993380055746,
+            "centerLongitude": -68.4756392980247,
+            "range": 500
+        },
+        {
+            "hotel_id": 7006,
+            "hotel_name": "Hotel Riu Turquoise",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 110,
+            "centerLatitude": -20.46685305555004,
+            "centerLongitude": 57.31421116978588,
+            "range": 500
+        },
+        {
+            "hotel_id": 7005,
+            "hotel_name": "Hotel Riu Palace Mauritius",
+            "altitude": 12,
+            "is3dmodel": false,
+            "heading": 110,
+            "centerLatitude": -20.46622527927169,
+            "centerLongitude": 57.31081173530697,
+            "range": 500
+        },
+        {
+            "hotel_id": 4821,
+            "hotel_name": "Hotel Riu Palace Aquarelle",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 90,
+            "centerLatitude": 18.48586625436842,
+            "centerLongitude": -77.61223825829714,
+            "range": 500
+        },
+        {
+            "hotel_id": 4902,
+            "hotel_name": "Hotel Riu Palace Jamaica",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 290,
+            "centerLatitude": 18.516280267499702,
+            "centerLongitude": -77.88393957242951,
+            "range": 500
+        },
+        {
+            "hotel_id": 4901,
+            "hotel_name": "Hotel Riu Montego Bay",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 18.517009371686743,
+            "centerLongitude": -77.88297577815504,
+            "range": 500
+        },
+        {
+            "hotel_id": 4903,
+            "hotel_name": "Hotel Riu Reggae",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 260,
+            "centerLatitude": 18.516021543573423,
+            "centerLongitude": -77.88542955988072,
+            "range": 500
+        },
+        {
+            "hotel_id": 4731,
+            "hotel_name": "Hotel Riu Palace Tropical Bay",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 180,
+            "centerLatitude": 18.345652120046054,
+            "centerLongitude": -78.3337281894149,
+            "range": 500
+        },
+        {
+            "hotel_id": 4732,
+            "hotel_name": "Hotel Riu Negril",
+            "altitude": 9,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 18.355266198646923,
+            "centerLongitude": -78.33621251165225,
+            "range": 500
+        },
+        {
+            "hotel_id": 4801,
+            "hotel_name": "Hotel Riu Ocho Rios",
+            "altitude": 7,
+            "is3dmodel": false,
+            "heading": 300,
+            "centerLatitude": 18.431568341589287,
+            "centerLongitude": -77.16619399969245,
+            "range": 500
+        },
+        {
+            "hotel_id": 820,
+            "hotel_name": "Hotel Riu Karamboa",
+            "altitude": 7,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 16.139602536198193,
+            "centerLongitude": -22.90348636565793,
+            "range": 500
+        },
+        {
+            "hotel_id": 823,
+            "hotel_name": "Hotel Riu Palace Boavista",
+            "altitude": 9,
+            "is3dmodel": false,
+            "heading": 185,
+            "centerLatitude": 16.13687397999829, 
+            "centerLongitude": -22.90477404872835,
+            "range": 500
+        },
+        {
+            "hotel_id": 822,
+            "hotel_name": "Hotel Riu Touareg",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 15.979801960427098,
+            "centerLongitude": -22.819165220523313,
+            "range": 500
+        },
+        {
+            "hotel_id": 804,
+            "hotel_name": "Hotel Riu Funana",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 16.594407809240938,
+            "centerLongitude": -22.922228203360213,
+            "range": 500
+        },
+        {
+            "hotel_id": 805,
+            "hotel_name": "Hotel Riu Palace Santa Maria",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 16.590431600059436,
+            "centerLongitude": -22.92240162144511,
+            "range": 500
+        },
+        {
+            "hotel_id": 803,
+            "hotel_name": "Hotel Riu Cabo Verde",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 16.595591602855727,
+            "centerLongitude": -22.923540314228767,
+            "range": 500
+        },
+        {
+            "hotel_id": 7201,
+            "hotel_name": "Hotel Riu Atoll",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 2.689008041449555,
+            "centerLongitude": 72.85858039098378,
+            "range": 500
+        },
+        {
+            "hotel_id": 7202,
+            "hotel_name": "Hotel Riu Palace Maldivas",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 2.69583437191787,
+            "centerLongitude": 72.85175811252321,
+            "range": 500
+        },
+        {
+            "hotel_id": 6552,
+            "hotel_name": "Hotel Riu Tikida Beach",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 30.402468522049254,
+            "centerLongitude": -9.599376460091229,
+            "range": 500
+        },
+        {
+            "hotel_id": 6556,
+            "hotel_name": "Hotel Riu Palace Tikida Taghazout",
+            "altitude": 20,
+            "is3dmodel": false,
+            "heading": 140,
+            "centerLatitude": 30.538364286120032,
+            "centerLongitude": -9.697043867759486,
+            "range": 500
+        },
+        {
+            "hotel_id": 6551,
+            "hotel_name": "Hotel Riu Tikida Dunas",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 30.39815220197704,
+            "centerLongitude": -9.597967749977785,
+            "range": 500
+        },
+        {
+            "hotel_id": 6553,
+            "hotel_name": "Hotel Riu Palace Tikida Agadir",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 180,
+            "centerLatitude": 30.40801622537908,
+            "centerLongitude": -9.599569857970936,
+            "range": 500
+        },
+        {
+            "hotel_id": 6502,
+            "hotel_name": "Hotel Riu Tikida Garden",
+            "altitude": 445,
+            "is3dmodel": false,
+            "heading": 210,
+            "centerLatitude": 31.650160831758317,
+            "centerLongitude": -7.979035480208768,
+            "range": 500
+        },
+        {
+            "hotel_id": 6501,
+            "hotel_name": "Hotel Riu Tikida Palmeraie",
+            "altitude": 460,
+            "is3dmodel": false,
+            "heading": 200,
+            "centerLatitude": 31.64902597824921,
+            "centerLongitude": -7.936466081933343,
+            "range": 500
+        },
+        {
+            "hotel_id": 2804,
+            "hotel_name": "Hotel Riu Palace Peninsula",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 280,
+            "centerLatitude": 21.141198325676932,
+            "centerLongitude": -86.77214643084253,
+            "range": 360
+        },
+        {
+            "hotel_id": 2851,
+            "hotel_name": "Hotel Riu Palace Costa Mujeres",
+            "altitude": 8,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 21.301567549062295,
+            "centerLongitude": -86.81487793916008,
+            "range": 500
+        },
+        {
+            "hotel_id": 2802,
+            "hotel_name": "Hotel Riu Palace Las Americas",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 320,
+            "centerLatitude": 21.138595271278582,
+            "centerLongitude": -86.7503230532931,
+            "range": 360
+        },
+        {
+            "hotel_id": 2854,
+            "hotel_name": "Hotel Riu Latino",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 160,
+            "centerLatitude": 21.27598994144283,
+            "centerLongitude": -86.81783433983466,
+            "range": 500
+        },
+        {
+            "hotel_id": 2803,
+            "hotel_name": "Hotel Riu Caribe",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 350,
+            "centerLatitude": 21.142906150921156,
+            "centerLongitude": -86.77488478785313,
+            "range": 360
+        },
+        {
+            "hotel_id": 2801,
+            "hotel_name": "Hotel Riu Cancun",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 21.137667688585733,
+            "centerLongitude": -86.74827994602298,
+            "range": 360
+        },
+        {
+            "hotel_id": 2806,
+            "hotel_name": "Hotel Riu Palace Kukulkan",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 21.106002832386732,
+            "centerLongitude": -86.7634690753973,
+            "range": 500
+        },
+        {
+            "hotel_id": 2853,
+            "hotel_name": "Hotel Riu Dunamar",
+            "altitude": 8,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 21.304477568418594,
+            "centerLongitude": -86.8139450672704,
+            "range": 500
+        },
+        {
+            "hotel_id": 3802,
+            "hotel_name": "Hotel Riu Santa Fe",
+            "altitude": 12,
+            "is3dmodel": true,
+            "heading": 190,
+            "centerLatitude": 22.899362065527097,
+            "centerLongitude": -109.89083713952127,
+            "range": 360
+        },
+        {
+            "hotel_id": 3801,
+            "hotel_name": "Hotel Riu Palace Cabo San Lucas",
+            "altitude": 22,
+            "is3dmodel": true,
+            "heading": 100,
+            "centerLatitude": 22.897301,
+            "centerLongitude": -109.890870,
+            "range": 360
+        },
+        {
+            "hotel_id": 3803,
+            "hotel_name": "Hotel Riu Palace Baja California",
+            "altitude": 15,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 22.896915,
+            "centerLongitude": -109.891553,
+            "range": 360
+        },
+        {
+            "hotel_id": 3601,
+            "hotel_name": "Hotel Riu Emerald Bay",
+            "altitude": 15,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 23.300809950734347,
+            "centerLongitude": -106.48631583632694,
+            "range": 360
+        },
+        {
+            "hotel_id": 2752,
+            "hotel_name": "Hotel Riu Tequila",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 250,
+            "centerLatitude": 20.608011671531322,
+            "centerLongitude": -87.09327948036761,
+            "range": 500
+        },
+        {
+            "hotel_id": 2760,
+            "hotel_name": "Hotel Riu Palace Riviera Maya",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 90,
+            "centerLatitude": 20.61158261631515,
+            "centerLongitude": -87.08610484860735,
+            "range": 500
+        },
+        {
+            "hotel_id": 2754,
+            "hotel_name": "Hotel Riu Playacar",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 20.60834850546118,
+            "centerLongitude": -87.09050187934824,
+            "range": 500
+        },
+        {
+            "hotel_id": 2753,
+            "hotel_name": "Hotel Riu Palace Mexico",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 80,
+            "centerLatitude": 20.60692176734308, 
+            "centerLongitude": -87.09158289670366,
+            "range": 500
+        },
+        {
+            "hotel_id": 2755,
+            "hotel_name": "Hotel Riu Lupita",
+            "altitude": 8,
+            "is3dmodel": false,
+            "heading": 140,
+            "centerLatitude": 20.612531293190653,
+            "centerLongitude": -87.09176127407322,
+            "range": 500
+        },
+        {
+            "hotel_id": 2751,
+            "hotel_name": "Hotel Riu Yucatan",
+            "altitude": 7,
+            "is3dmodel": false,
+            "heading": 90,
+            "centerLatitude": 20.605317395655067,
+            "centerLongitude": -87.09213544716863,
+            "range": 500
+        },
+        {
+            "hotel_id": 3755,
+            "hotel_name": "Hotel Riu Jalisco",
+            "altitude": 15,
+            "is3dmodel": false,
+            "heading": 160,
+            "centerLatitude": 20.733751349897712,
+            "centerLongitude": -105.31324244331996,
+            "range": 500
+        },
+        {
+            "hotel_id": 3701,
+            "hotel_name": "Hotel Riu Vallarta",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 260,
+            "centerLatitude": 20.7310820526078,
+            "centerLongitude": -105.3122465698584,
+            "range": 500
+        },
+        {
+            "hotel_id": 3756,
+            "hotel_name": "Hotel Riu Palace Pacifico",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 170,
+            "centerLatitude": 20.738760450760488,
+            "centerLongitude": -105.31912607714726,
+            "range": 500
+        },
+        {
+            "hotel_id": 4501,
+            "hotel_name": "Hotel Riu Playa Blanca",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 90,
+            "centerLatitude": 8.349825768038471,
+            "centerLongitude": -80.14931505091648,
+            "range": 500
+        },
+        {
+            "hotel_id": 1334,
+            "hotel_name": "Hotel Riu Madeira",
+            "altitude": 20,
+            "is3dmodel": true,
+            "heading": 290,
+            "centerLatitude": 32.64566666855348,
+            "centerLongitude": -16.826816160308276,
+            "range": 360
+
+        },
+        {
+            "hotel_id": 6601,
+            "hotel_name": "Hotel Riu Baobab",
+            "altitude": 2,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 14.29349,
+            "centerLongitude": -16.929729,
+            "range": 500
+        },
+        {
+            "hotel_id": 504,
+            "hotel_name": "Hotel Riu Chiclana",
+            "altitude": 30,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 36.336968684971026,
+            "centerLongitude": -6.160034342828641,
+            "range": 360
+        },
+        {
+            "hotel_id": 143,
+            "hotel_name": "Hotel Riu Palace La Mola",
+            "altitude": 25,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 38.663649,
+            "centerLongitude": 1.514678,
+            "range": 360
+        },
+        {
+            "hotel_id": 313,
+            "hotel_name": "Hotel Riu Calypso",
+            "altitude": 25,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 28.05010977795534,
+            "centerLongitude": -14.348947565845739,
+            "range": 500
+        },
+        {
+            "hotel_id": 317,
+            "hotel_name": "Hotel Riu Oliva Beach Resort",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 28.708546015107046,
+            "centerLongitude": -13.839871417264531,
+            "range": 500
+        },
+        {
+            "hotel_id": 316,
+            "hotel_name": "Hotel Riu Palace Tres Islas",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 28.712381773888133,
+            "centerLongitude": -13.838543242787557,
+            "range": 500
+        },
+        {
+            "hotel_id": 305,
+            "hotel_name": "Hotel Riu Palace Jandia",
+            "altitude": 30,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 28.049239657739605, 
+            "centerLongitude": -14.34580521362225,
+            "range": 500
+        },
+        {
+            "hotel_id": 216,
+            "hotel_name": "Hotel Riu Gran Canaria",
+            "altitude": 30,
+            "is3dmodel": true,
+            "heading": 170,
+            "centerLatitude": 27.740868935894603,
+            "centerLongitude": -15.604603352140028,
+            "range": 360
+        },
+        {
+            "hotel_id": 205,
+            "hotel_name": "Hotel Riu Papayas",
+            "altitude": 48,
+            "is3dmodel": true,
+            "heading": 310,
+            "centerLatitude": 27.76409909277549,
+            "centerLongitude": -15.572212307675642,
+            "range": 360
+        },
+        {
+            "hotel_id": 232,
+            "hotel_name": "Hotel Riu Palace Maspalomas",
+            "altitude": 30,
+            "is3dmodel": true,
+            "heading": 100,
+            "centerLatitude": 27.746703922585528,
+            "centerLongitude": -15.57666605186336,
+            "range": 360
+        },
+        {
+            "hotel_id": 212,
+            "hotel_name": "Hotel Riu Palace Meloneras",
+            "altitude": 20,
+            "is3dmodel": true,
+            "heading": 170,
+            "centerLatitude": 27.739843543155658,
+            "centerLongitude": -15.602758939136153,
+            "range": 360
+        },
+        {
+            "hotel_id": 231,
+            "hotel_name": "Hotel Riu Palace Palmeras",
+            "altitude": 34,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 27.755974434484493,
+            "centerLongitude": -15.571423285210674,
+            "range": 360
+        },
+        {
+            "hotel_id": 217,
+            "hotel_name": "Hotel Riu Vistamar",
+            "altitude": 108,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 27.78824673320005,
+            "centerLongitude": -15.72175246228495,
+            "range": 500
+        },
+        {
+            "hotel_id": 215,
+            "hotel_name": "Hotel Riu Palace Oasis",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 27.736729019509365,
+            "centerLongitude": -15.597600154927862,
+            "range": 360
+        },
+        {
+            "hotel_id": 611,
+            "hotel_name": "Hotel Riu Paraiso Lanzarote",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 28.926469693064533,
+            "centerLongitude": -13.639052631789149,
+            "range": 500
+        },
+        {
+            "hotel_id": 108,
+            "hotel_name": "Hotel Riu Bravo",
+            "altitude": 7,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 39.51599033225518,
+            "centerLongitude": 2.7475363792228027,
+            "range": 360
+        },
+        {
+            "hotel_id": 102,
+            "hotel_name": "Hotel Riu Concordia",
+            "altitude": 4,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 39.518069094824504,
+            "centerLongitude": 2.745701765454057,
+            "range": 360
+        },
+        {
+            "hotel_id": 107,
+            "hotel_name": "Hotel Riu Festival",
+            "altitude": 7,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 39.51938738303657,
+            "centerLongitude": 2.7466140027518735,
+            "range": 360
+        },
+        {
+            "hotel_id": 116,
+            "hotel_name": "Hotel Riu Playa Park",
+            "altitude": 10,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 39.51884810599459,
+            "centerLongitude": 2.7480630402877355,
+            "range": 360
+        },
+        {
+            "hotel_id": 105,
+            "hotel_name": "Hotel Riu San Francisco",
+            "altitude": 7,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 39.51696889611037,
+            "centerLongitude": 2.7453191262883405,
+            "range": 360
+        },
+        {
+            "hotel_id": 561,
+            "hotel_name": "Hotel Riu Monica",
+            "altitude": 14,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 36.74262921797887,
+            "centerLongitude": -3.8830760184734205,
+            "range": 500
+        },
+        {
+            "hotel_id": 568,
+            "hotel_name": "Hotel Riu Costa del Sol",
+            "altitude": 9,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 36.63541406219195,
+            "centerLongitude": -4.486991969329558,
+            "range": 360
+        },
+        {
+            "hotel_id": 563,
+            "hotel_name": "Hotel Riu Nautilus",
+            "altitude": 15,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 36.60209755609427,
+            "centerLongitude": -4.509757799146957,
+            "range": 360
+        },
+        {
+            "hotel_id": 409,
+            "hotel_name": "Hotel Riu Garoe",
+            "altitude": 102,
+            "is3dmodel": true,
+            "heading": 240,
+            "centerLatitude": 28.41277950680547,
+            "centerLongitude": -16.531749055283242,
+            "range": 360
+        },
+        {
+            "hotel_id": 410,
+            "hotel_name": "Hotel Riu Buenavista",
+            "altitude": 24,
+            "is3dmodel": false,
+            "heading": 120,
+            "centerLatitude": 28.12330308657298,
+            "centerLongitude": -16.778054049982895,
+            "range": 500
+        },
+        {
+            "hotel_id": 405,
+            "hotel_name": "Hotel Riu Palace Tenerife",
+            "altitude": 22,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 28.094521114941934,
+            "centerLongitude": -16.74762637127904,
+            "range": 360
+        },
+        {
+            "hotel_id": 406,
+            "hotel_name": "Hotel Riu Arecas",
+            "altitude": 25,
+            "is3dmodel": true,
+            "heading": 180,
+            "centerLatitude": 28.095266632344742,
+            "centerLongitude": -16.746009168944557,
+            "range": 360
+        },
+        {
+            "hotel_id": 7101,
+            "hotel_name": "Hotel Riu Sri Lanka",
+            "altitude": 10,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 6.309500546907697,
+            "centerLongitude": 80.03324973562755,
+            "range": 500
+        },
+        {
+            "hotel_id": 7301,
+            "hotel_name": "Hotel Riu Palace Zanzibar",
+            "altitude": 28,
+            "is3dmodel": false,
+            "heading": 210,
+            "centerLatitude": -5.747427510171126,
+            "centerLongitude": 39.29157534449652,
+            "range": 500
+        },
+        {
+            "hotel_id": 7303,
+            "hotel_name": "Hotel Riu Jambo",
+            "altitude": 26,
+            "is3dmodel": false,
+            "heading": 180,
+            "centerLatitude": -5.743648439550415,
+            "centerLongitude": 39.29076459601714,
+            "range": 500
+        },
+        {
+            "hotel_id": 6901,
+            "hotel_name": "Hotel Riu Dubai",
+            "altitude": 2,
+            "is3dmodel": false,
+            "heading": 280,
+            "centerLatitude": 25.300410463635455,
+            "centerLongitude": 55.306998846303436,
+            "range": 500
+        },
+        {
+            "hotel_id": 2101,
+            "hotel_name": "Hotel Riu Plaza Berlin",
+            "altitude": 40,
+            "is3dmodel": true,
+            "heading": 90,
+            "centerLatitude": 52.50049019817634,
+            "centerLongitude": 13.34709379975518,
+            "range": 360
+        },
+        {
+            "hotel_id": 1401,
+            "hotel_name": "Hotel Riu Plaza The Gresham Dublin",
+            "altitude": 5,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 53.35157228407437,
+            "centerLongitude": -6.260643061851733,
+            "range": 360
+        },
+        {
+            "hotel_id": 3502,
+            "hotel_name": "Hotel Riu Plaza Guadalajara",
+            "altitude": 1609,
+            "is3dmodel": true,
+            "heading": 320,
+            "centerLatitude": 20.666052678104982,
+            "centerLongitude": -103.39355252635988,
+            "range": 700
+        },
+        {
+            "hotel_id": 4401,
+            "hotel_name": "Hotel Riu Plaza Panama",
+            "altitude": 5,
+            "is3dmodel": false,
+            "heading": 0,
+            "centerLatitude": 8.981053826965086,
+            "centerLongitude": -79.52102962205173,
+            "range": 500
+        },
+        {
+            "hotel_id": 1601,
+            "hotel_name": "Hotel Riu Plaza London Victoria",
+            "altitude": 5,
+            "is3dmodel": true,
+            "heading": 120,
+            "centerLatitude": 51.494458741193,
+            "centerLongitude": -0.14201950795036744,
+            "range": 360
+        },
+        {
+            "hotel_id": 582,
+            "hotel_name": "Hotel Riu Plaza España",
+            "altitude": 638,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 40.424303250194484,
+            "centerLongitude": -3.7109152903782583,
+            "range": 380
+        },
+        {
+            "hotel_id": 5811,
+            "hotel_name": "Hotel Riu Plaza Chicago",
+            "altitude": 180,
+            "is3dmodel": true,
+            "heading": 300,
+            "centerLatitude": 41.89370027671488,
+            "centerLongitude": -87.62328132881726,
+            "range": 660
+        },
+        {
+            "hotel_id": 5724,
+            "hotel_name": "Hotel Riu Plaza Miami Beach",
+            "altitude": 8,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 25.806822226092024,
+            "centerLongitude": -80.12375611198036,
+            "range": 360
+        },
+        {
+            "hotel_id": 5802,
+            "hotel_name": "Hotel Riu Plaza Manhattan Times Square",
+            "altitude": 15,
+            "is3dmodel": true,
+            "centerLatitude": 40.759422868067226,
+            "centerLongitude": -73.98292419684134,
+            "heading": 0,
+            "range": 700
+        },
+        {
+            "hotel_id": 5801,
+            "hotel_name": "Hotel Riu Plaza New York Times Square",
+            "altitude": 15,
+            "is3dmodel": true,
+            "heading": 0,
+            "centerLatitude": 40.76038520658693,
+            "centerLongitude": -73.98812519063652,
+            "range": 400
+        },
+        {
+            "hotel_id": 5831,
+            "hotel_name": "Hotel Riu Plaza Fisherman's Wharf",
+            "altitude": 5,
+            "is3dmodel": true,
+            "heading": 270,
+            "centerLatitude": 37.80717310435171,
+            "centerLongitude": -122.41297593339426,
+            "range": 300
+        }
+    ]
+}
+

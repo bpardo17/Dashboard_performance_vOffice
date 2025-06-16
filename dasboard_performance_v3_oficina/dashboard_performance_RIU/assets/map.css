@@ -1,0 +1,21 @@
+#chartdiv,
+#chartdiv__visitas-web,
+#chartdiv__visitas-app,
+#chartdiv__reservas,
+#chartdiv__cliente,
+#chartdiv__static {
+  /*width: 50%;
+  height: 75vh;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0%, -50%);*/
+}
+#chartdiv canvas:last-child,
+#chartdiv__visitas-web canvas:last-child,
+#chartdiv__visitas-app canvas:last-child,
+#chartdiv__reservas canvas:last-child,
+#chartdiv__cliente canvas:last-child,
+#chartdiv__static canvas:last-child {
+  display: none;
+}/*# sourceMappingURL=map.css.map */
