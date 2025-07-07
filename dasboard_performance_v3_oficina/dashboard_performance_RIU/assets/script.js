@@ -120,14 +120,7 @@ import { initializeMap3D } from "./map_gm3d.js";
   async function getData() {
     try {
       const response = await fetch(
-        "https://europe-west1-bq-consumer-riu-api.cloudfunctions.net/get_monitor_data",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*" // ← Esto NO tendrá efecto
-          }
-        }
+        "https://lb-g.riu.com/monitor/",
       );
 
       // Comentar esta constante cuando se quiera hacer lectura de datos desde el json en vivo y descomentar las lineas 54, 55 y 56
@@ -445,6 +438,7 @@ import { initializeMap3D } from "./map_gm3d.js";
       }
       // Llamamos a la función cada 3.2 segundos para que se mueva los items del slider.
       sliderNextInterval = setInterval(function () {
+        debugger;
         sliderNext();
         console.log("Slide moving");
         //debugger; // Debugger para pausar la ejecución del slider de nacionalidades dentro de cada vista hotel 3D.

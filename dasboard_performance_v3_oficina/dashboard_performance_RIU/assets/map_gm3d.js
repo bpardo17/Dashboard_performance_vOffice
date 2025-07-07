@@ -305,6 +305,8 @@ export function initializeMap3D() {
                         .getElementsByClassName("wrapper__maps")[0]
                         .classList.remove("w-full");
                     }, 2500);
+                    // Lanzamos el reload para reiniciar la sesión, sino al rato peta el proyecto.
+                    location.reload();
                   }, 2000);
                 }, 500);
               }, 6000);
